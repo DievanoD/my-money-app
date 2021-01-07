@@ -1,0 +1,24 @@
+{
+  "name": "my-money-backend",
+  "version": "1.0.0",
+  "description": "Standard API structure for the project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "D1EVO",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-query-int": "^3.0.0",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.11.10",
+    "mongoose-paginate": "^5.0.3",
+    "pm2": "^4.5.1"
+  }
+}
