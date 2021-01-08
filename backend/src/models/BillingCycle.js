@@ -1,4 +1,5 @@
 const mongoose = require('../database/connection');
+const mongoosePaginate = require('mongoose-paginate');
 
 mongoose.set('useCreateIndex', true);
 
@@ -52,6 +53,9 @@ const billingCycleSchema = mongoose.Schema({
     credits: [creditSchema],
     debts: [debtSchema]
 }, { timestamps: {} });
+
+// Paginate
+billingCycleSchema.plugin(mongoosePaginate);
 
 const BillingCycle = mongoose.model('BillingCycle', billingCycleSchema);
 module.exports = BillingCycle;

@@ -8,10 +8,12 @@ router.get('/', (req, res) => {
     res.send('My money backend');
 });
 
-router.get('/billingCycles', indexController.index);
-router.get('/billingCycles/:id', indexController.show);
-router.post('/billingCycles', indexController.create);
-router.put('/billingCycles/:id', indexController.update);
-router.delete('/billingCycles/:id', indexController.delete);
+router.get('/billingcycles/summary', indexController.summary);
+
+router.get('/billingcycles', indexController.paginate);
+router.get('/billingcycles/:id', indexController.show);
+router.post('/billingcycles', indexController.create);
+router.put('/billingcycles/:id', indexController.update);
+router.delete('/billingcycles/:id', indexController.delete);
 
 module.exports = router;
